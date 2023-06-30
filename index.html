@@ -2,25 +2,241 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      http-equiv="X-UA-Compatible"
-      content="IE=edge"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <link
-      rel="stylesheet"
-      href="static/reset.css"
-    />
-    <link
-      rel="stylesheet"
-      href="static/style.css"
-    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/reset.css" />
+    <link rel="stylesheet" href="static/styles.css" />
     <title>Site name</title>
   </head>
+
   <body>
+    <header class="header">
+      <div class="container header__container">
+        <div class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item animation-first">
+              <a class="header__nav-link header-link" href=""> WEEKLY </a>
+            </li>
+            <li class="header__nav-item animation-second">
+              <a class="header__nav-link header-link" href=""> MONTHLY </a>
+            </li>
+            <li class="header__nav-item animation-third">
+              <a class="header__nav-link header-link" href=""> EDUCATION </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header__logo">
+          <a href="">
+            <svg
+              width="74"
+              height="31"
+              viewBox="0 0 74 31"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="15.5"
+                cy="15.5"
+                r="14.5"
+                stroke="black"
+                stroke-width="2"
+              />
+              <circle
+                cx="58.5"
+                cy="15.5"
+                r="14.5"
+                stroke="black"
+                stroke-width="2"
+              />
+              <path
+                d="M29.5 10.5L37 3L41 7L44.5 10.5"
+                stroke="black"
+                stroke-width="2"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <div class="header__link">
+          <ul class="header__link-list">
+            <li class="header__link-item animation-first">
+              <a class="header__link-link header-link" href="">NEWS</a>
+            </li>
+            <li class="header__link-item animation-second">
+              <a class="header__link-link header-link" href="">RESEARCH</a>
+            </li>
+            <li class="header__link-item animation-third">
+              <div class="header__link-item-login">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.9165 10.0833L19.4332 2.56665"
+                    stroke="black"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M20.1666 6.23331V1.83331H15.7666"
+                    stroke="black"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.0835 1.83331H8.25016C3.66683 1.83331 1.8335 3.66665 1.8335 8.24998V13.75C1.8335 18.3333 3.66683 20.1666 8.25016 20.1666H13.7502C18.3335 20.1666 20.1668 18.3333 20.1668 13.75V11.9166"
+                    stroke="black"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <a class="header__link-link header-link" href="">LOGIN</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="container hero__container animation-fourth">
+          <div class="hero__container-title">
+            <h1 class="hero__container-title-header">New Economic Outlook</h1>
+          </div>
+
+          <div class="hero__container-image">
+            <div class="hero__container-description">
+              <p class="hero__container-description-text">
+                Найточніші прогнози та аналіз макроекономіки України<br />
+                від найбільш авторитетної, визнаної на міжнародному рівні<br />
+                команди Ukraine Economic Outlook.
+              </p>
+            </div>
+            <button class="hero__container-button-btn">
+              Оформити підписку
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 17 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.2399 4.79196L1.6333 15.3986"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M3.70175 4.80978L12.2394 4.7914L12.2217 13.3297"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="hero__bottom-image">
+          <img
+            src="static/image/pattern.png"
+            alt="Pattern"
+            width="354"
+            height="100%"
+          />
+        </div>
+      </section>
+
+      <section class="about-us anim-items">
+        <div class="container about-us__container">
+          <div class="about-us__image">
+            <svg
+              width="56"
+              height="56"
+              viewBox="0 0 56 56"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="0.5"
+                y="0.5"
+                width="55"
+                height="55"
+                rx="11.5"
+                fill="#E9F5FF"
+                stroke="#C2DCF0"
+              />
+              <path
+                d="M28 43C36.2843 43 43 36.2843 43 28C43 19.7157 36.2843 13 28 13C19.7157 13 13 19.7157 13 28C13 36.2843 19.7157 43 28 43Z"
+                stroke="black"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M23.6348 23.5C23.9874 22.4975 24.6835 21.6522 25.5997 21.1137C26.5159 20.5752 27.5931 20.3784 28.6405 20.5581C29.688 20.7377 30.638 21.2823 31.3224 22.0953C32.0068 22.9083 32.3813 23.9373 32.3798 25C32.3798 28 27.8798 29.5 27.8798 29.5"
+                stroke="black"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M28 35.5H28.015"
+                stroke="black"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <h2 class="about-us__question">Хто ми?</h2>
+          <p class="about-us__description">
+            Ukraine Economic Outlook — незалежна група
+            <strong>макроекономічного </strong>аналізу та прогнозування. Якщо ви
+            хочете знати, що буде з економікою України завтра, чи як
+            коливатиметься курс долара в найблищий місяць або рiк — то це до
+            нас.
+          </p>
+
+          <div class="about-us__info">
+            <div class="about-us__info-block">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="8" cy="8" r="8" fill="#8251C1" />
+                <path
+                  d="M8.00079 12.0719C7.78479 12.0719 7.60479 12.0119 7.46079 11.8919C7.32479 11.7639 7.25679 11.5839 7.25679 11.3519V6.7199C7.25679 6.4879 7.32479 6.3119 7.46079 6.1919C7.60479 6.0719 7.78479 6.0119 8.00079 6.0119C8.21679 6.0119 8.39679 6.0719 8.54079 6.1919C8.68479 6.3119 8.75679 6.4879 8.75679 6.7199V11.3519C8.75679 11.5839 8.68479 11.7639 8.54079 11.8919C8.39679 12.0119 8.21679 12.0719 8.00079 12.0719ZM8.00079 4.9439C7.72879 4.9439 7.51279 4.8719 7.35279 4.7279C7.19279 4.5759 7.11279 4.3799 7.11279 4.1399C7.11279 3.8999 7.19279 3.7079 7.35279 3.5639C7.51279 3.4199 7.72879 3.3479 8.00079 3.3479C8.26479 3.3479 8.47679 3.4199 8.63679 3.5639C8.80479 3.7079 8.88879 3.8999 8.88879 4.1399C8.88879 4.3799 8.80879 4.5759 8.64879 4.7279C8.48879 4.8719 8.27279 4.9439 8.00079 4.9439Z"
+                  fill="white"
+                />
+              </svg>
+              <span >
+                <strong>Цікавий факт:</strong>
+              </span>
+            </div>
+            <p class="about-us__info-description">
+              Ми прогнозуємо вартість долара з точністю до 0,3%. У найближчих
+              конкурентів похибка становить мінімум 5%. Тобто приблизно в 20
+              разів гірше.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <script src="static/index.js"></script>
   </body>
 </html>
