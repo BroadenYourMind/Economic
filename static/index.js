@@ -1,3 +1,5 @@
+// анимации
+
 window.addEventListener('load', function() {
     setTimeout(function() {
       const firsAnim = document.querySelectorAll('.animation-first');
@@ -24,6 +26,7 @@ window.addEventListener('load', function() {
   });
 
 
+  // анимация скрол
   const animItems = document.querySelectorAll(".anim-items");
 
   if (animItems.length > 0) {
@@ -59,3 +62,19 @@ window.addEventListener('load', function() {
   
     animOnScroll()
 }
+
+// меню бургер
+
+const burgerButton = document.getElementById('burger');
+const burgerNav = document.getElementById('header__burger-nav');
+const burgerClose = document.querySelector('.header__burger-close');
+
+function toggleBurgerNav() {
+  burgerNav.classList.toggle('active');
+}
+
+burgerButton.addEventListener('click', toggleBurgerNav);
+
+burgerClose.addEventListener('click', toggleBurgerNav);
+
+// анимация бургер меню
