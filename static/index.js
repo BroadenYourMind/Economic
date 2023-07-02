@@ -83,8 +83,8 @@ window.addEventListener('load', function() {
 // меню бургер
 
 const burgerButton = document.getElementById('burger');
-const burgerNav = document.getElementById('header__burger-nav');
-const burgerClose = document.querySelector('.header__burger-close');
+const burgerNav = document.getElementById('burger__block');
+const burgerClose = document.querySelector('.burger__close');
 
 function toggleBurgerNav() {
   burgerNav.classList.toggle('active');

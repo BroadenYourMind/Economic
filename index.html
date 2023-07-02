@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="static/reset.css" />
-    <link rel="stylesheet" href="static/style.css" />
+    <link rel="stylesheet" href="static/styletwo.css" />
     <title>Title</title>
   </head>
 
   <body>
     <header class="header">
       <div class="container header__container">
-        <div class="header__container-border">
-          <div class="header__burger animation-first">
-            <button id="burger" class="header__burger-btn">
+
+          <div class="burger animation-first">
+            <button id="burger" class="burger__btn">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
@@ -31,8 +31,8 @@
                 />
               </svg>
             </button>
-            <nav id="header__burger-nav" class="header__burger-nav">
-              <button class="header__burger-close">
+            <div id="burger__block" class="burger__nav">
+              <button class="burger__close">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
@@ -45,24 +45,26 @@
                   />
                 </svg>
               </button>
-              <ul class="header__burger-list">
-                <li class="header__burger-item">
-                  <a class="header__burger-link" href=""> WEEKLY </a>
-                </li>
-                <li class="header__burger-item">
-                  <a class="header__burger-link" href=""> MONTHLY </a>
-                </li>
-                <li class="header__burger-item">
-                  <a class="header__burger-link" href=""> EDUCATION </a>
-                </li>
-                <li class="header__burger-item">
-                  <a class="header__burger-link" href=""> DIGEST </a>
-                </li>
-                <li class="header__burger-item">
-                  <a class="header__burger-link" href=""> RESEARCH </a>
-                </li>
-              </ul>
-            </nav>
+              <nav class="burger__navi">
+                <ul class="burger__list">
+                  <li class="burger__item">
+                    <a class="burger__link" href=""> WEEKLY </a>
+                  </li>
+                  <li class="burger__item">
+                    <a class="burger__link" href=""> MONTHLY </a>
+                  </li>
+                  <li class="burger__item">
+                    <a class="burger__link" href=""> EDUCATION </a>
+                  </li>
+                  <li class="burger__item">
+                    <a class="burger__link" href=""> DIGEST </a>
+                  </li>
+                  <li class="burger__item">
+                    <a class="burger__link" href=""> RESEARCH </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
 
           <div class="header__nav">
@@ -120,7 +122,7 @@
                 <a class="header__link-link header-link" href="">RESEARCH</a>
               </li>
             </ul>
-            <div class="header__link-item-login animation-third">
+            <div class="header__link-item-login-block animation-third">
               <a class="header__link-item-login">
                 <svg
                   width="22"
@@ -155,21 +157,22 @@
               </a>
             </div>
           </div>
-        </div>
       </div>
     </header>
 
     <main class="main">
       <section class="hero">
-        <div class="container hero__container">
+        <div class="container">
           <h1 class="hero__title animation-fourth">New Economic Outlook</h1>
+        </div>
 
-          <div class="hero__image">
+          <div class="hero__image animation-sixth">
             <img
-              class="animation-fifth hero__image-image"
+              class=" hero__image-image"
               src="static/image/economic.png"
               alt=""
             />
+            <div class="container">
             <div class="hero__description">
               <p class="hero__description-text animation-sixth">
                 Найточніші прогнози та аналіз макроекономіки України<br />
@@ -315,28 +318,73 @@
 
           <div class="about-us__info">
             <div class="about-us__info-block">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="8" cy="8" r="8" fill="#8251C1" />
-                <path
-                  d="M8.00079 12.0719C7.78479 12.0719 7.60479 12.0119 7.46079 11.8919C7.32479 11.7639 7.25679 11.5839 7.25679 11.3519V6.7199C7.25679 6.4879 7.32479 6.3119 7.46079 6.1919C7.60479 6.0719 7.78479 6.0119 8.00079 6.0119C8.21679 6.0119 8.39679 6.0719 8.54079 6.1919C8.68479 6.3119 8.75679 6.4879 8.75679 6.7199V11.3519C8.75679 11.5839 8.68479 11.7639 8.54079 11.8919C8.39679 12.0119 8.21679 12.0719 8.00079 12.0719ZM8.00079 4.9439C7.72879 4.9439 7.51279 4.8719 7.35279 4.7279C7.19279 4.5759 7.11279 4.3799 7.11279 4.1399C7.11279 3.8999 7.19279 3.7079 7.35279 3.5639C7.51279 3.4199 7.72879 3.3479 8.00079 3.3479C8.26479 3.3479 8.47679 3.4199 8.63679 3.5639C8.80479 3.7079 8.88879 3.8999 8.88879 4.1399C8.88879 4.3799 8.80879 4.5759 8.64879 4.7279C8.48879 4.8719 8.27279 4.9439 8.00079 4.9439Z"
-                  fill="white"
-                />
-              </svg>
-              <span>
-                <strong>Цікавий факт:</strong>
-              </span>
+              <div class="">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="8" cy="8" r="8" fill="#8251C1" />
+                  <path
+                    d="M8.00079 12.0719C7.78479 12.0719 7.60479 12.0119 7.46079 11.8919C7.32479 11.7639 7.25679 11.5839 7.25679 11.3519V6.7199C7.25679 6.4879 7.32479 6.3119 7.46079 6.1919C7.60479 6.0719 7.78479 6.0119 8.00079 6.0119C8.21679 6.0119 8.39679 6.0719 8.54079 6.1919C8.68479 6.3119 8.75679 6.4879 8.75679 6.7199V11.3519C8.75679 11.5839 8.68479 11.7639 8.54079 11.8919C8.39679 12.0119 8.21679 12.0719 8.00079 12.0719ZM8.00079 4.9439C7.72879 4.9439 7.51279 4.8719 7.35279 4.7279C7.19279 4.5759 7.11279 4.3799 7.11279 4.1399C7.11279 3.8999 7.19279 3.7079 7.35279 3.5639C7.51279 3.4199 7.72879 3.3479 8.00079 3.3479C8.26479 3.3479 8.47679 3.4199 8.63679 3.5639C8.80479 3.7079 8.88879 3.8999 8.88879 4.1399C8.88879 4.3799 8.80879 4.5759 8.64879 4.7279C8.48879 4.8719 8.27279 4.9439 8.00079 4.9439Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div>
+                <p>
+
+                  <h4 class="about-us__block-info-header">Цікавий факт:</h4>
+                </p>
+               
+                <p class="about-us__block-info-description">
+                  Ми прогнозуємо вартість долара з точністю до <b>0,3%.</b> У найближчих
+                  конкурентів похибка становить мінімум 5%. Тобто приблизно в 20
+                  разів гірше.
+                </p>
+              </div>
             </div>
-            <p class="about-us__info-description">
-              Ми прогнозуємо вартість долара з точністю до 0,3%. У найближчих
-              конкурентів похибка становить мінімум 5%. Тобто приблизно в 20
-              разів гірше.
-            </p>
+
+            <div class="about-us__table">
+              <div class="about-us__table-block">
+                <svg class="about-us__table-block-svg" width="809" height="320" viewBox="0 0 809 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="2" y1="247.5" x2="809" y2="247.5" stroke="#C2DCF0"/>
+                  <line x1="2" y1="316.5" x2="809" y2="316.5" stroke="#C2DCF0"/>
+                  <line x1="2" y1="177.5" x2="809" y2="177.5" stroke="#C2DCF0"/>
+                  <line x1="2" y1="108.5" x2="809" y2="108.5" stroke="#C2DCF0"/>
+                  <line x1="2" y1="39.5" x2="809" y2="39.5" stroke="#C2DCF0"/>
+                  <line x1="253.5" y1="15" x2="253.5" y2="316" stroke="#D96561" stroke-dasharray="2 2"/>
+                  <line x1="503.5" y1="3" x2="503.5" y2="316" stroke="#D96561" stroke-dasharray="2 2"/>
+                  <line x1="753.5" y1="54" x2="753.5" y2="316" stroke="#D96561" stroke-dasharray="2 2"/>
+                  <line x1="753.5" y1="311" x2="753.5" y2="316" stroke="#D96561" stroke-width="3"/>
+                  <line x1="503.5" y1="311" x2="503.5" y2="316" stroke="#D96561" stroke-width="3"/>
+                  <line x1="253.5" y1="311" x2="253.5" y2="316" stroke="#D96561" stroke-width="3"/>
+                  <path d="M2 317L253.551 194.244L504 168L754 218.372" stroke="#C2DCF0" stroke-width="2"/>
+                  <path d="M2 317L254 14.6846L504 2L754 55.0067" stroke="#C2DCF0" stroke-width="2"/>
+                  <circle cx="2.5" cy="316.5" r="2.5" fill="#169EB0"/>
+                  <circle cx="253.5" cy="132.5" r="2.5" fill="#169EB0"/>
+                  <path d="M2 317L253.5 132L503.5 74.5L753.5 132.5" stroke="#169EB0" stroke-width="2"/>
+                  <circle cx="503.5" cy="74.5" r="2.5" fill="#169EB0"/>
+                  <circle cx="753.5" cy="132.5" r="2.5" fill="#169EB0"/>
+                  <circle cx="253.5" cy="119.5" r="2.5" fill="#8251C1"/>
+                  <circle cx="503.5" cy="87.5" r="2.5" fill="#8251C1"/>
+                  <circle cx="753.5" cy="145.5" r="2.5" fill="#8251C1"/>
+                  <path d="M2 318L253.5 119.5L503.5 87.5L752 145.278" stroke="#8251C1" stroke-width="2"/>
+                  <circle cx="2.5" cy="317.5" r="2.5" fill="#8251C1"/>
+                </svg>
+                <img class="about-us__table-block-image" src="static/image/tableText.png" alt="">  
+              </div>
+
+              <div class="about-us__table-description">
+                <h3>Курс USD</h3>
+                <ul>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

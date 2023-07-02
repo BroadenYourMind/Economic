@@ -1,3 +1,4 @@
+@charset "UTF-8";
 // размеры ширины окна
 $breakpoint-phone: 430.1px;
 $breakpoint-tablet: 768px;
@@ -69,219 +70,225 @@ $breakpoint-desktop: 1366px;
   margin: 0 auto;
 }
 
-/* burger */
-// .header {
-  
-  .header__nav {
-    display: none;
-  }
-  .header__link {
+.burger {
+  z-index: 1;
+  display: none;
+
+    @include before-laptop {
+    display: contents;
+    position: absolute;
+    top: 30%;
+    }
+
+  &__link {
     @include before-laptop {
       color: var(--color-black);
-      padding: 24px 110px;
-      &:hover {
-        color: var(--bg-btn);
+      padding: 24px 125px;
+
+        &:hover {
+            color: var(--bg-btn);
+        }
     }
+  }
+
+  &__btn {
+    @include before-laptop {
+      background-color: var(--bg-blue);
+      cursor: pointer;
+    }
+  }
+  &__close {
+    @include before-laptop {
+      padding: 16.5px 150px;
+      background-color: var(--white);
+      border-bottom: 1px solid var(--bg-blue);
+      cursor: pointer;
+      box-shadow: var(--box-shadow);
+
+        &:hover {
+            color: var(--bg-btn);
+        }
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    background-color: #fff;
+    height: 100vh;
+    width: 320px;
+    overflow-y: auto;
+    transition: transform 0.5s;
+    transform: translate(-150%, 0);
+  }
+
+  &__item {
+    padding: 12px 0px;
+  }
+  &__list {
+    margin-top: 12px;
+  }
+
+  &__nav.active {
+    display: block;
+    transform: translateX(0);
   }
 }
 
-  
-// @media (max-width: 1024px) {
-//   .header {
-    // &__burger-link {
-    //   @include before-laptop {
 
-  
-        
-    //     }
-    //   } 
-    // }
-    // &__burger-btn {
-
-    // }
-  //   &__nav {
-  //     display: none;
-  //   }
-
-  //   // &__link-list {
-  //   //   display: none;
-  //   // }
-  //   &__burger-close {
-  //     padding: 24.3px 150px;
-  //     background-color: var(--white);
-  //     &:hover {
-  //       color: var(--bg-btn);
-  //     }
-  //   }
-  // }
-
-  .hero {
-    &__image-image {
-      width: 100%;
-      padding-top: 40px;
-      padding-bottom: 40px;
-
-    }
-    &__title {
-      margin-bottom: 0;
-    }
-    &__button-btn {
-      padding: 20px 28px;
-      left: 38%;
-    }
-    &__description {
-      margin-top: 240px;
-      font-size: 24px;
-    }
-  }
-
-
-
-
-
-  // &__burger-nav {
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // z-index: 20;
-    // background-color: #fff;
-    // height: 100vh;
-    // width: 320px;
-    // overflow-y: auto;
-    // transition: transform 0.5s;
-    // transform: translate(-150%, 0);
-  // }
-
-  // &__burger-item {
-  //   padding: 12px 0px;
-  // }
-
-  // &__burger-close {
-  //   padding: 30px 100px;
-  //   border-bottom: 1px solid var(--bg-blue);
-  //   cursor: pointer;
-  // }
-// }
-
-
-
-/* header */
 .header {
   background-color: var(--bg-blue);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 102px;
+  height: 104px;
   position: relative;
-
-  &__nav-link {
-    font-size: 0.875em;
-    font-weight: 500;
-    color: var(--color-black);
-
-    &:hover {
-      color: var(--color-hover-link);
+    @include before-laptop {
+        height: 72px;
     }
-  }
-  &__link {
-    display: flex;
-    gap: 60px;
-  }
-  &__link-link {
-    color: var(--color-black);
-    cursor: pointer;
-    &:hover {
-      color: var(--color-hover-link);
-    }
-  }
-  &__link-item-login {
-    color: var(--color-black);
-    &:hover {
-      color: var(--color-hover-link);
-    }
-  }
 
-  &__container-border {
+  &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: solid 1px var(--light-blue);
     padding-bottom: 30px;
-    justify-content: space-between;
+    padding-top: 20px;
+    width: 95%;
+
+        @include before-laptop {
+            padding-bottom: 10px;
+        }
   }
 
-  &__logo {
-    position: absolute;
-    left: 51%;
-    top: 20%;
-    transform: translateX(-50%);
-  }
-
-  &__nav-list {
-    display: flex;
-    gap: 60px;
-  }
-
-  &__link-list {
-    display: flex;
-    gap: 60px;
+  &__nav {
     @include before-laptop {
-      display: none;
+        display: none;
     }
+  }
+  &__nav-link {
+    font-size: 0.875em;
+    font-weight: 500;
+    color: var(--color-black);
+
+        &:hover {
+        color: var(--color-hover-link);
+        }
+  }
+
+  &__link {
+    display: flex;
+    gap: 60px;
+  }
+
+
+  &__link-item-login {
+    color: var(--color-black);
+    cursor: pointer;
+  
+        &:hover {
+        color: var(--color-hover-link);
+        }
+    
+        &:hover svg path {
+        stroke: var(--color-hover-link);
+        }
+    
+        &:hover span {
+        color: var(--color-hover-link);
+        }
   }
 
   &__link-item-login {
     display: flex;
     align-items: center;
     gap: 8px;
-    &:hover {
-      color: var(--bg-btn);
-    }
+
+  }
+  &__link-link {
+    color: var(--color-black);
+        &:hover{
+            color: var(--color-hover-link);
+        }
+  }
+
+
+  &__logo {
+    position: absolute;
+    left: 51%;
+    top: 30%;
+    transform: translateX(-50%);
+  }
+  &__nav-list {
+    display: flex;
+    gap: 60px;
+  }
+  &__link-list {
+    display: flex;
+    gap: 60px;
+
+        @include before-laptop {
+            display: none;
+        }
   }
 }
 
-/* main */
 
 .hero {
   background-color: var(--bg-blue);
-  height: 90vh;
+  height: 100vh;
   position: relative;
-
-  &__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+    
+  @include before-laptop {
+    height: 90vh;
   }
 
   &__title {
-    margin-bottom: 40px;
     font-size: 2em;
     font-weight: 400;
   }
 
-  &__image {
-    position: relative;
-    width: 100%;
-    height: 400px;
-  }
-  &__image img {
-    position: absolute;
-    top: 45%;
-    left: 48%;
-    transform: translate(-51%, -50%);
-    z-index: 0;
-  }
+//   &__image {
+
+
+// }
+&__image img {
+    vertical-align:middle;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 8%;
+
+    @include before-laptop {
+        margin-bottom: 15%;
+    }
+}
+
+
   &__description {
-    margin-top: 240px;
-    margin-bottom: 40px;
+    position: absolute;
+    top: 60%;
+    left: 25%;
     font-size: 1.5em;
     font-weight: 400;
     line-height: 1.6;
     text-align: center;
     gap: 4px;
     z-index: 0.5;
+
+        @include before-laptop {
+            left: 23%;
+            top: 50%;
+            font-size: 1.3em;
+        }
   }
+
   &__button-btn {
     display: flex;
     align-items: center;
@@ -293,11 +300,18 @@ $breakpoint-desktop: 1366px;
     color: var(--white);
     cursor: pointer;
     position: relative;
-    left: 38%;
-    margin-top: 46px;
-    &:hover {
-      background-color: var(--color-hover-link);
-    }
+    left: 30%;
+    top: 20px;
+
+        &:hover {
+        background-color: var(--color-hover-link);
+        }
+
+            @include before-laptop {
+                padding: 20px 28px;
+                left: 30%;
+            }
+
   }
   &__bottom-image {
     position: absolute;
@@ -310,23 +324,26 @@ $breakpoint-desktop: 1366px;
 .about-us {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 72px;
 
   &__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin-top: 72px;
   }
 
   &__image {
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-right: 20px;
   }
 
   &__question {
-    margin: 40px auto;
+    margin-top: 40px;
     font-size: 40px;
     font-weight: 700;
+    margin-right: 20px;
+    text-align: center;
+    margin-bottom: 40px;
   }
 
   &__description {
@@ -340,107 +357,18 @@ $breakpoint-desktop: 1366px;
 
   &__info-block {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 12px;
-    margin-top: 40px;
-  }
-  &__block-info-header {
-    font-size: 1em;
-    font-weight: 600;
+    margin-bottom: 12px;
   }
 
-  &__block-info-description {
+  &__info-description {
     font-size: 0.875em;
-    margin-top: 12px;
-  }
-
-  &__table {
-    width: 100%;
-    margin-top: 88px;
-    display: flex;
-  }
-  &__table-block-svg {
-    position: relative;
-    top: 10%;
-    left: 10%;
-    z-index: 1;
-  }
-  &__table-block-image {
-    position: absolute;
-    left: 10%;
-    z-index: 2;
-  }
-  &__table-description {
-    position: absolute;
-    right: 20px;
   }
 }
-
-// BURGER
-.burger {
-  display: none;
-
-      @include before-laptop {
-      display: contents;
-      z-index: 1;
-  }
-  &__nav {
-    @include before-laptop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 20;
-    background-color: var(--white);
-    height: 100vh;
-    width: 320px;
-    overflow-y: auto;
-    transition: transform 0.5s;
-    transform: translate(-150%, 0);
-  }}
-
-  &__item {
-    @include before-laptop {
-    padding: 12px 0px;
-  }}
-
-  &__close {
-    @include before-laptop {
-    padding: 31.6px 150px;
-    border-bottom: 1px solid var(--bg-blue);
-    background-color: var(--white);
-    box-shadow: var(--box-shadow);
-    cursor: pointer;
-      &:hover {
-        color: var(--bg-btn);
-  }}
-
-
-  &__btn {
-    @include before-laptop {
-    background-color: var(--bg-blue);
-    cursor: pointer;
-  }}
-
-  }
-}
-.burger__nav.active {
-  display: block;
-  transform: translateX(0);
-}
-.burger.active .burger__nav {
-  transform: translate(0);
-}
-
-.burger-menu__btn {
-  background-color: var(--bg-blue);
-  cursor: pointer;
-}
-
-
 
 
 /* animation */
-
 .animation-first {
   transform: translate(0px, -100px);
   opacity: 0;
@@ -484,6 +412,7 @@ $breakpoint-desktop: 1366px;
   transform: translate(0px, 0px);
   opacity: 1;
 }
+
 .animation-fifth {
   transform: translateY(-50%);
   animation-name: Appearance;
@@ -529,23 +458,21 @@ $breakpoint-desktop: 1366px;
   opacity: 1;
 }
 
-
-
 /* анимация картинки */
 .anim-pattern {
-  @include laptop{
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
-    animation: dash 4s linear alternate infinite;
-  }
+    @include laptop {
+        stroke-dasharray: 500;
+        stroke-dashoffset: 500;
+        animation: dash 4s linear alternate infinite;
+    }
 }
 
 .anim-pattern-circle {
-  @include laptop{
-  animation-name: circle;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-}
+    @include laptop {
+        animation-name: circle;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+    }
 }
 
 @keyframes dash {
@@ -556,7 +483,6 @@ $breakpoint-desktop: 1366px;
     stroke-dashoffset: 0;
   }
 }
-
 @keyframes circle {
   0% {
     opacity: 0;
@@ -567,4 +493,4 @@ $breakpoint-desktop: 1366px;
   100% {
     opacity: 0;
   }
-}
+} /*# sourceMappingURL=style.css.map */
