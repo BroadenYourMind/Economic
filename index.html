@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ua">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,41 +12,27 @@
   <body>
     <header class="header">
       <div class="container header__container">
-        <div class="header__nav">
-          <ul class="header__nav-list">
-            <li class="header__nav-item animation-first">
-              <a class="header__nav-link header-link" href=""> WEEKLY </a>
-            </li>
-            <li class="header__nav-item animation-second">
-              <a class="header__nav-link header-link" href=""> MONTHLY </a>
-            </li>
-            <li class="header__nav-item animation-third">
-              <a class="header__nav-link header-link" href=""> EDUCATION </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="header__burger animation-first">
-          <button id="burger" class="burger-menu__btn">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"
-              />
-            </svg>
-          </button>
-          <nav id="header__burger-nav" class="header__burger-nav">
-            <ul class="header__burger-list">
-              <li class="header__burger-close">
+        <div class="header__container-border">
+          <div class="header__burger animation-first">
+            <button id="burger" class="header__burger-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"
+                />
+              </svg>
+            </button>
+            <nav id="header__burger-nav" class="header__burger-nav">
+              <button class="header__burger-close">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
@@ -58,157 +44,179 @@
                     d="M3.64 2.27L7.5 6.13l3.84-3.84A.92.92 0 0 1 12 2a1 1 0 0 1 1 1a.9.9 0 0 1-.27.66L8.84 7.5l3.89 3.89A.9.9 0 0 1 13 12a1 1 0 0 1-1 1a.92.92 0 0 1-.69-.27L7.5 8.87l-3.85 3.85A.92.92 0 0 1 3 13a1 1 0 0 1-1-1a.9.9 0 0 1 .27-.66L6.16 7.5L2.27 3.61A.9.9 0 0 1 2 3a1 1 0 0 1 1-1c.24.003.47.1.64.27Z"
                   />
                 </svg>
-              </li>
+              </button>
+              <ul class="header__burger-list">
+  
+                <li class="header__burger-item">
+                  <a class="header__burger-link" href=""> WEEKLY </a>
+                </li>
+                <li class="header__burger-item">
+                  <a class="header__burger-link" href=""> MONTHLY </a>
+                </li>
+                <li class="header__burger-item">
+                  <a class="header__burger-link" href=""> EDUCATION </a>
+                </li>
+                <li class="header__burger-item">
+                  <a class="header__burger-link" href=""> DIGEST </a>
+                </li>
+                <li class="header__burger-item">
+                  <a class="header__burger-link" href=""> RESEARCH </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
 
-              <li class="header__burger-item">
-                <a class="header__burger-link" href=""> WEEKLY </a>
+          <div class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item animation-first">
+                <a class="header__nav-link header-link" href=""> WEEKLY </a>
               </li>
-              <li class="header__burger-item">
-                <a class="header__burger-link" href=""> MONTHLY </a>
+              <li class="header__nav-item animation-second">
+                <a class="header__nav-link header-link" href=""> MONTHLY </a>
               </li>
-              <li class="header__burger-item">
-                <a class="header__burger-link" href=""> EDUCATION </a>
-              </li>
-              <li class="header__burger-item">
-                <a class="header__burger-link" href=""> DIGEST </a>
-              </li>
-              <li class="header__burger-item">
-                <a class="header__burger-link" href=""> RESEARCH </a>
+              <li class="header__nav-item animation-third">
+                <a class="header__nav-link header-link" href=""> EDUCATION </a>
               </li>
             </ul>
-          </nav>
-        </div>
+          </div>
+  
+  
+          <div class="header__logo">
+            <a href="">
+              <svg
+                width="74"
+                height="31"
+                viewBox="0 0 74 31"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="15.5"
+                  cy="15.5"
+                  r="14.5"
+                  stroke="black"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="58.5"
+                  cy="15.5"
+                  r="14.5"
+                  stroke="black"
+                  stroke-width="2"
+                />
+                <path
+                  d="M29.5 10.5L37 3L41 7L44.5 10.5"
+                  stroke="black"
+                  stroke-width="2"
+                />
+              </svg>
+            </a>
+          </div>
 
-        <div class="header__logo">
-          <a href="">
-            <svg
-              width="74"
-              height="31"
-              viewBox="0 0 74 31"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="15.5"
-                cy="15.5"
-                r="14.5"
-                stroke="black"
-                stroke-width="2"
-              />
-              <circle
-                cx="58.5"
-                cy="15.5"
-                r="14.5"
-                stroke="black"
-                stroke-width="2"
-              />
-              <path
-                d="M29.5 10.5L37 3L41 7L44.5 10.5"
-                stroke="black"
-                stroke-width="2"
-              />
-            </svg>
-          </a>
-        </div>
+          <div class="header__link">
+            <ul class="header__link-list">
+              <li class="header__link-item animation-first">
+                <a class="header__link-link header-link" href="">NEWS</a>
+              </li>
+              <li class="header__link-item animation-second">
+                <a class="header__link-link header-link" href="">RESEARCH</a>
+              </li>
+              <li class="header__link-item-login animation-third">
+                <a class="header__link-item-login">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.9165 10.0833L19.4332 2.56665"
+                      stroke="black"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M20.1666 6.23331V1.83331H15.7666"
+                      stroke="black"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M10.0835 1.83331H8.25016C3.66683 1.83331 1.8335 3.66665 1.8335 8.24998V13.75C1.8335 18.3333 3.66683 20.1666 8.25016 20.1666H13.7502C18.3335 20.1666 20.1668 18.3333 20.1668 13.75V11.9166"
+                      stroke="black"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span class="header__link-link header-link" href="">LOGIN</span>
+                </a>
+              </li>
+            </ul>
+          </div>
 
-        <div class="header__link">
-          <ul class="header__link-list">
-            <li class="header__link-item animation-first">
-              <a class="header__link-link header-link" href="">NEWS</a>
-            </li>
-            <li class="header__link-item animation-second">
-              <a class="header__link-link header-link" href="">RESEARCH</a>
-            </li>
-            <li class="header__link-item animation-third">
-              <div class="header__link-item-login">
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 22 22"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M11.9165 10.0833L19.4332 2.56665"
-                    stroke="black"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M20.1666 6.23331V1.83331H15.7666"
-                    stroke="black"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M10.0835 1.83331H8.25016C3.66683 1.83331 1.8335 3.66665 1.8335 8.24998V13.75C1.8335 18.3333 3.66683 20.1666 8.25016 20.1666H13.7502C18.3335 20.1666 20.1668 18.3333 20.1668 13.75V11.9166"
-                    stroke="black"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <a class="header__link-link header-link" href="">LOGIN</a>
-              </div>
-            </li>
-          </ul>
-        </div>
+          <div class="header__link-tablet animation-first">
+            <a class="header__link-item-login">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.9165 10.0833L19.4332 2.56665"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M20.1666 6.23331V1.83331H15.7666"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.0835 1.83331H8.25016C3.66683 1.83331 1.8335 3.66665 1.8335 8.24998V13.75C1.8335 18.3333 3.66683 20.1666 8.25016 20.1666H13.7502C18.3335 20.1666 20.1668 18.3333 20.1668 13.75V11.9166"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="header__link-link header-link" href="">
 
-        <div class="header__link-tablet animation-first">
-          <div class="header__link-item-login">
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 22 22"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M11.9165 10.0833L19.4332 2.56665"
-                stroke="black"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M20.1666 6.23331V1.83331H15.7666"
-                stroke="black"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M10.0835 1.83331H8.25016C3.66683 1.83331 1.8335 3.66665 1.8335 8.24998V13.75C1.8335 18.3333 3.66683 20.1666 8.25016 20.1666H13.7502C18.3335 20.1666 20.1668 18.3333 20.1668 13.75V11.9166"
-                stroke="black"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <a class="header__link-link header-link" href="">LOGIN</a>
+                LOGIN
+              </span>
+            </a>
           </div>
         </div>
+
       </div>
     </header>
 
     <main class="main">
       <section class="hero">
-        <div class="container hero__container animation-fourth">
-          <div class="hero__container-title">
-            <h1 class="hero__container-title-header">New Economic Outlook</h1>
-          </div>
+        <div class="container hero__container ">
 
-          <div class="hero__container-image">
-            <div class="hero__container-description">
-              <p class="hero__container-description-text">
+            <h1 class="hero__title animation-fourth">New Economic Outlook</h1>
+
+
+          <div class="hero__image">
+            <img class=" animation-fifth" src="static/image/economic.png" alt="">
+            <div class="hero__description  ">
+              <p class="hero__description-text animation-sixth">
                 Найточніші прогнози та аналіз макроекономіки України<br />
                 від найбільш авторитетної, визнаної на міжнародному рівні<br />
                 команди Ukraine Economic Outlook.
               </p>
             </div>
-            <button class="hero__container-button-btn">
+            <button class="hero__button-btn animation-seventh">
               Оформити підписку
               <svg
                 width="17"
@@ -236,12 +244,21 @@
           </div>
         </div>
         <div class="hero__bottom-image">
-          <img
-            src="static/image/pattern.png"
-            alt="Pattern"
-            width="354"
-            height="100%"
-          />
+          <svg width="448" height="247" viewBox="0 0 448 247" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_119_4173)">
+            <path class="anim-pattern" d="M94 248L277 65L448.5 22" stroke="#8EB6D0" stroke-opacity="0.5"/>
+            <path class="anim-pattern" d="M51.5 248.5L276.5 119.5L448.5 89.5" stroke="#8EB6D0" stroke-opacity="0.5"/>
+            <path class="anim-pattern" d="M0 249L276 169.5L448.5 145" stroke="#8EB6D0" stroke-opacity="0.5"/>
+            <circle class="anim-pattern-circle" cx="278" cy="65" r="3" fill="#8EB6D0"/>
+            <circle class="anim-pattern-circle" cx="278" cy="119" r="3" fill="#8EB6D0"/>
+            <circle class="anim-pattern-circle" cx="277" cy="169" r="3" fill="#8EB6D0"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_119_4173">
+            <rect width="448" height="247" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
         </div>
       </section>
 

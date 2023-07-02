@@ -1,29 +1,46 @@
 // анимации
 
 window.addEventListener('load', function() {
-    setTimeout(function() {
-      const firsAnim = document.querySelectorAll('.animation-first');
-      const secondAnim = document.querySelectorAll('.animation-second');
-      const thirdAnim = document.querySelectorAll('.animation-third');
-      const fourthAnim = document.querySelectorAll('.animation-fourth')
-  
-      firsAnim.forEach(function(firsAnim) {
-        firsAnim.classList.add('animation-first-active');
-      });
-  
-      secondAnim.forEach(function(secondAnim) {
-        secondAnim.classList.add('animation-second-active');
-      });
-  
-      thirdAnim.forEach(function(thirdAnim) {
-        thirdAnim.classList.add('animation-third-active');
-      });
+  setTimeout(function() {
+    const firsAnim = document.querySelectorAll('.animation-first');
+    const secondAnim = document.querySelectorAll('.animation-second');
+    const thirdAnim = document.querySelectorAll('.animation-third');
+    const fourthAnim = document.querySelectorAll('.animation-fourth');
+    const fifthAnim = document.querySelectorAll('.animation-fifth');
+    const sixthAnim = document.querySelectorAll('.animation-sixth');
+    const seventhAnim = document.querySelectorAll('.animation-seventh');
 
-      fourthAnim.forEach(function(fourthAnim) {
-        fourthAnim.classList.add('animation-fourth-active')
-      })
-    }, 400); 
-  });
+    firsAnim.forEach(function(element) {
+      element.classList.add('animation-first-active');
+    });
+
+    secondAnim.forEach(function(element) {
+      element.classList.add('animation-second-active');
+    });
+
+    thirdAnim.forEach(function(element) {
+      element.classList.add('animation-third-active');
+    });
+
+    fourthAnim.forEach(function(element) {
+      element.classList.add('animation-fourth-active');
+    });
+
+    fifthAnim.forEach(function(element) {
+      element.classList.add('animation-fifth-active');
+    });
+
+    sixthAnim.forEach(function(element) {
+      element.classList.add('animation-sixth-active');
+    });
+
+    seventhAnim.forEach(function(element) {
+      element.classList.add('animation-seventh-active');
+    });
+
+
+  }, 400); 
+});
 
 
   // анимация скрол
@@ -74,7 +91,6 @@ function toggleBurgerNav() {
 }
 
 burgerButton.addEventListener('click', toggleBurgerNav);
-
 burgerClose.addEventListener('click', toggleBurgerNav);
 
 // анимация бургер меню
