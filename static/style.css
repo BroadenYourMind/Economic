@@ -14,8 +14,8 @@
   --table-bg: #e9f5ff;
   --table-color-second: #8251c1;
   --table-border: #c2dcf0;
-  --footer-link: #0076A0;
-  --footer-link-info: #606D81;
+  --footer-link: #0076a0;
+  --footer-link-info: #606d81;
 }
 
 .container {
@@ -469,10 +469,8 @@ td {
   max-width: 116px;
   text-align: center;
 }
-.footer__main-logo-link {
-  color: var(--color-black);
-}
 .footer__main-logo-text {
+  color: var(--color-black);
   padding: 28px 0;
   line-height: 28.2px;
   font-size: 25.45px;
