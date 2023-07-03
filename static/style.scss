@@ -68,6 +68,8 @@ $breakpoint-desktop: 1366px;
   --table-bg: #e9f5ff;
   --table-color-second: #8251c1;
   --table-border: #c2dcf0;
+  --footer-link: #0076A0;
+  --footer-link-info: #606D81;
 }
 
 .container {
@@ -401,7 +403,7 @@ $breakpoint-desktop: 1366px;
     height: auto;
     position: absolute;
     left: 13%;
-    top: 65%;
+    top: 68%;
 
     @include before-laptop {
       left: 2.5%;
@@ -413,7 +415,7 @@ $breakpoint-desktop: 1366px;
     max-width: 55%;
     height: auto;
     position: absolute;
-    top: 59%;
+    top: 60%;
     left: 15%;
 
     @include before-laptop {
@@ -469,6 +471,11 @@ $breakpoint-desktop: 1366px;
     width: 80%;
     position: absolute;
     bottom: -55%;
+
+    @include before-laptop {
+      width: 95%;
+      bottom: -45%;
+    }
   }
 
   &__block-table-thead-block-header {
@@ -516,6 +523,88 @@ td {
 }
 .center-border {
   border-right: 1px solid var(--table-border);
+}
+
+.footer {
+ position: relative;
+ top: 500px;
+
+ &__main {
+  display: flex;
+  justify-content: space-between;
+ }
+
+ &__main-logo{
+  max-width: 116px;
+  text-align: center;
+ }
+
+ &__main-logo-link {
+  color: var(--color-black);
+ }
+
+ &__main-logo-text {
+  padding: 28px 0;
+  line-height: 28.2px;
+  font-size: 25.45px;
+ }
+
+ &__main-link-nav-item {
+  padding-bottom: 28px;
+  font-size: 18px;
+  font-weight: 700;
+ }
+
+ &__main-link-nav-link {
+  color: var(--color-black);
+    &:hover {
+      color: var(--footer-link);
+    }
+ }
+
+ &__main-info-item {
+  padding-bottom: 30px;
+  color: var(--footer-link-info);
+
+ }
+
+ &__main-info-link {
+  color: var(--footer-link-info);
+
+    &:hover {
+      color: var(--bg-btn);
+    }
+ }
+
+ &__main-info-item-privacy {
+  color: var(--bg-btn);
+  border-bottom: 1px solid var(--bg-btn);
+  font-size: 14px;
+  font-weight: 700;
+ }
+
+ &__main-social-list {
+  display: flex;
+  gap: 16px;
+ }
+
+ &__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 144px;
+  padding-bottom: 48px;
+ }
+ &__bottom-copyright {
+  display: flex;
+  align-items: center;
+ }
+
+ &__bottom-payment {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+ }
 }
 
 /* animation */
