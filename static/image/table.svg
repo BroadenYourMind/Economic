@@ -1,0 +1,25 @@
+<svg width="809" height="320" viewBox="0 0 809 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="2" y1="247.5" x2="809" y2="247.5" stroke="#C2DCF0"/>
+<line x1="2" y1="316.5" x2="809" y2="316.5" stroke="#C2DCF0"/>
+<line x1="2" y1="177.5" x2="809" y2="177.5" stroke="#C2DCF0"/>
+<line x1="2" y1="108.5" x2="809" y2="108.5" stroke="#C2DCF0"/>
+<line x1="2" y1="39.5" x2="809" y2="39.5" stroke="#C2DCF0"/>
+<line x1="253.5" y1="15" x2="253.5" y2="316" stroke="#D96561" stroke-dasharray="2 2"/>
+<line x1="503.5" y1="3" x2="503.5" y2="316" stroke="#D96561" stroke-dasharray="2 2"/>
+<line x1="753.5" y1="54" x2="753.5" y2="316" stroke="#D96561" stroke-dasharray="2 2"/>
+<line x1="753.5" y1="311" x2="753.5" y2="316" stroke="#D96561" stroke-width="3"/>
+<line x1="503.5" y1="311" x2="503.5" y2="316" stroke="#D96561" stroke-width="3"/>
+<line x1="253.5" y1="311" x2="253.5" y2="316" stroke="#D96561" stroke-width="3"/>
+<path d="M2 317L253.551 194.244L504 168L754 218.372" stroke="#C2DCF0" stroke-width="2"/>
+<path d="M2 317L254 14.6846L504 2L754 55.0067" stroke="#C2DCF0" stroke-width="2"/>
+<circle cx="2.5" cy="316.5" r="2.5" fill="#169EB0"/>
+<circle cx="253.5" cy="132.5" r="2.5" fill="#169EB0"/>
+<path d="M2 317L253.5 132L503.5 74.5L753.5 132.5" stroke="#169EB0" stroke-width="2"/>
+<circle cx="503.5" cy="74.5" r="2.5" fill="#169EB0"/>
+<circle cx="753.5" cy="132.5" r="2.5" fill="#169EB0"/>
+<circle cx="253.5" cy="119.5" r="2.5" fill="#8251C1"/>
+<circle cx="503.5" cy="87.5" r="2.5" fill="#8251C1"/>
+<circle cx="753.5" cy="145.5" r="2.5" fill="#8251C1"/>
+<path d="M2 318L253.5 119.5L503.5 87.5L752 145.278" stroke="#8251C1" stroke-width="2"/>
+<circle cx="2.5" cy="317.5" r="2.5" fill="#8251C1"/>
+</svg>
