@@ -59,15 +59,15 @@ $breakpoint-desktop: 1366px;
   --light-blue: #8eb6d0;
   --white: #fff;
   --bg-btn: #2285a8;
-  --color-hover-link: #056b90;
+  --bg-btn-hover: #19637e;
+  --color-hover-link: #8251c1;
   --box-shadow: rgba(0, 0, 0, 0.05);
-  --first-circle:  #169EB0;
-  --second-circle: #8251C1;
-  --third-circle: #C2DCF0;
-  --table-bg: #E9F5FF;
-  --table-color-second: #8251C1;
-  --table-border: #C2DCF0;
-
+  --first-circle: #169eb0;
+  --second-circle: #8251c1;
+  --third-circle: #c2dcf0;
+  --table-bg: #e9f5ff;
+  --table-color-second: #8251c1;
+  --table-border: #c2dcf0;
 }
 
 .container {
@@ -81,44 +81,11 @@ $breakpoint-desktop: 1366px;
   z-index: 1;
   display: none;
 
-    @include before-laptop {
-    display: contents;
-    position: absolute;
-    top: 30%;
-    }
-
-  &__link {
-    @include before-laptop {
-      color: var(--color-black);
-      padding: 24px 125px;
-
-        &:hover {
-            color: var(--bg-btn);
-        }
-    }
+  @include before-laptop {
+    display: block;
   }
 
-  &__btn {
-    @include before-laptop {
-      background-color: var(--bg-blue);
-      cursor: pointer;
-    }
-  }
-  &__close {
-    @include before-laptop {
-      padding: 16.5px 150px;
-      background-color: var(--white);
-      border-bottom: 1px solid var(--bg-blue);
-      cursor: pointer;
-      box-shadow: var(--box-shadow);
-
-        &:hover {
-            color: var(--bg-btn);
-        }
-    }
-  }
-
-  &__nav {
+  &__block {
     position: absolute;
     top: 0;
     left: 0;
@@ -129,119 +96,163 @@ $breakpoint-desktop: 1366px;
     overflow-y: auto;
     transition: transform 0.5s;
     transform: translate(-150%, 0);
+    box-shadow: 4px 4px 4px var(--box-shadow);
+
+    &.active {
+      transform: translateX(0);
+    }
+
+    @include before-phone {
+      width: 100vw;
+    }
   }
 
-  &__item {
-    padding: 12px 0px;
+  &__open {
+    @include before-laptop {
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    @include before-phone {
+      scale: 0.7;
+    }
   }
+
+  &__close {
+    height: 72px;
+    width: inherit;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--bg-blue);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-hover-link);
+    }
+
+    @include before-phone {
+      height: 40px;
+
+      & svg {
+        scale: 0.7;
+      }
+    }
+  }
+
   &__list {
     margin-top: 12px;
+    text-align: center;
   }
 
-  &__nav.active {
+  &__link {
     display: block;
-    transform: translateX(0);
+    color: var(--color-black);
+    width: 100%;
+    height: 100%;
+    padding: 12px 0px;
+
+    &:hover {
+      color: var(--color-hover-link);
+    }
   }
 }
 
-
 .header {
-  background-color: var(--bg-blue);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 104px;
-  position: relative;
-    @include before-laptop {
-        height: 72px;
-    }
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+
+  @include before-laptop {
+    height: 72px;
+  }
+
+  @include before-phone {
+    height: 40px;
+  }
 
   &__container {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: solid 1px var(--light-blue);
-    padding-bottom: 30px;
-    padding-top: 20px;
-    width: 95%;
 
-        @include before-laptop {
-            padding-bottom: 10px;
-        }
-  }
+    @include before-desktop() {
+      width: 85%;
+    }
 
-  &__nav {
-    @include before-laptop {
-        display: none;
+    @include before-laptop() {
+      padding: 0;
+    }
+
+    @include before-phone {
+      width: 90%;
+      border: 0;
     }
   }
-  &__nav-link {
+
+  &__list {
+    @include laptop {
+      gap: 60px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__link {
     font-size: 0.875em;
     font-weight: 500;
     color: var(--color-black);
 
-        &:hover {
-        color: var(--color-hover-link);
-        }
-  }
+    &:hover {
+      color: var(--color-hover-link);
+    }
 
-  &__link {
-    display: flex;
-    gap: 60px;
-  }
+    @include before-laptop {
+      display: none;
 
+      &_login {
+        display: inline;
+      }
+    }
 
-  &__link-item-login {
-    color: var(--color-black);
-    cursor: pointer;
-  
-        &:hover {
-        color: var(--color-hover-link);
-        }
-    
-        &:hover svg path {
+    &_login {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+
+      @include before-phone {
+        font-size: 0.75em;
+      }
+
+      &:hover svg path {
         stroke: var(--color-hover-link);
-        }
-    
-        &:hover span {
+      }
+
+      &:hover span {
         color: var(--color-hover-link);
-        }
+      }
+    }
   }
-
-  &__link-item-login {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-  }
-  &__link-link {
-    color: var(--color-black);
-        &:hover{
-            color: var(--color-hover-link);
-        }
-  }
-
 
   &__logo {
     position: absolute;
-    left: 51%;
-    top: 30%;
-    transform: translateX(-50%);
-  }
-  &__nav-list {
-    display: flex;
-    gap: 60px;
-  }
-  &__link-list {
-    display: flex;
-    gap: 60px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
 
-        @include before-laptop {
-            display: none;
-        }
+    @include before-phone() {
+      scale: 0.5;
+    }
   }
 }
-
 
 .hero {
   background-color: var(--bg-blue);
@@ -250,53 +261,61 @@ $breakpoint-desktop: 1366px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
-    
+  padding-top: 200px;
+
   @include before-laptop {
-    height: 90vh;
+    height: fit-content;
+    padding: 100px 0 140px;
+  }
+
+  @include before-tablet {
+    padding: 100px 0 40px;
+  }
+
+  @include before-phone {
+    padding: 60px 0 32px;
   }
 
   &__title {
+    position: relative;
     font-size: 2em;
     font-weight: 400;
   }
 
-//   &__image {
-
-
-// }
-&__image img {
-    vertical-align:middle;
+  &__image {
     max-width: 100%;
-    height: auto;
-    margin-bottom: 8%;
+    margin-bottom: -10%;
+    margin-top: -5%;
+    margin-left: -8%;
 
-    @include before-laptop {
-        margin-bottom: 15%;
+    @include before-desktop {
+      margin-left: -10%;
     }
-}
 
+    @include before-tablet {
+      margin-left: -11%;
+    }
+  }
 
   &__description {
-    position: absolute;
-    top: 55%;
-    left: 25%;
+    margin-bottom: 24px;
     font-size: 1.5em;
     font-weight: 400;
     line-height: 1.6;
-    text-align: center;
-    gap: 4px;
-    z-index: 0.5;
 
-        @include before-laptop {
-            left: 23%;
-            top: 50%;
-            font-size: 1.3em;
-        }
+    @include before-tablet {
+      font-size: 1em;
+    }
+
+    @include before-phone {
+      font-size: 0.75em;
+    }
   }
 
   &__button-btn {
+    position: relative;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -305,31 +324,34 @@ $breakpoint-desktop: 1366px;
     border: none;
     border-radius: 8px;
     color: var(--white);
+    font-weight: 700;
     cursor: pointer;
-    position: relative;
-    left: 30%;
-    top: 20px;
 
-        &:hover {
-        background-color: var(--color-hover-link);
-        }
+    &:hover {
+      background-color: var(--bg-btn-hover);
+    }
 
-            @include before-laptop {
-                padding: 20px 28px;
-                left: 30%;
-            }
-
+    @include before-laptop {
+      padding: 20px 28px;
+    }
   }
+
   &__bottom-image {
     position: absolute;
     bottom: 0;
     right: 0;
+    z-index: -1;
+
+    @include before-tablet {
+      display: none;
+    }
   }
 }
 
 /* about__us */
 .about-us {
   height: 100vh;
+  background-color: #fff;
 
   &__container {
     margin-top: 72px;
@@ -364,7 +386,7 @@ $breakpoint-desktop: 1366px;
     display: flex;
     gap: 12px;
   }
-  
+
   &__block-info-header {
     font-size: 16px;
     font-weight: 600;
@@ -424,27 +446,25 @@ $breakpoint-desktop: 1366px;
     align-items: center;
     gap: 8px;
   }
-  &__graf-description-first-circle{
+  &__graf-description-first-circle {
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: var(--first-circle);
-    ;
   }
-  &__graf-description-second-circle{
+  &__graf-description-second-circle {
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: var(--second-circle);
   }
-  &__graf-description-third-circle{
+  &__graf-description-third-circle {
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: var(--third-circle);
   }
 
-  
   &__block-table {
     width: 80%;
     position: absolute;
@@ -480,7 +500,6 @@ $breakpoint-desktop: 1366px;
 
   &__block-table-fourth {
     border-bottom: 1px solid var(--table-border);
-
   }
 }
 
@@ -492,7 +511,6 @@ td {
   padding: 16px 0;
 }
 
-
 .table__text-center {
   text-align: center;
 }
@@ -500,37 +518,36 @@ td {
   border-right: 1px solid var(--table-border);
 }
 
-
 /* animation */
-.animation-first {
+.animation-first-down {
   transform: translate(0px, -100px);
   opacity: 0;
   transition: all 0.7s ease 0s;
 }
 
-.animation-first-active {
+.animation-first-down-active {
   transform: translate(0px, 0px);
   opacity: 1;
 }
 
-.animation-second {
+.animation-second-down {
   transform: translate(0px, -100px);
   opacity: 0;
   transition: all 0.7s ease 0.1s;
 }
 
-.animation-second-active {
+.animation-second-down-active {
   transform: translate(0px, 0px);
   opacity: 1;
 }
 
-.animation-third {
+.animation-third-down {
   transform: translate(0px, -100px);
   opacity: 0;
   transition: all 1s ease 0.2s;
 }
 
-.animation-third-active {
+.animation-third-down-active {
   transform: translate(0px, 0px);
   opacity: 1;
 }
@@ -593,19 +610,19 @@ td {
 
 /* анимация картинки */
 .anim-pattern {
-    @include laptop {
-        stroke-dasharray: 500;
-        stroke-dashoffset: 500;
-        animation: dash 4s linear alternate infinite;
-    }
+  @include laptop {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: dash 4s linear alternate infinite;
+  }
 }
 
 .anim-pattern-circle {
-    @include laptop {
-        animation-name: circle;
-        animation-duration: 8s;
-        animation-iteration-count: infinite;
-    }
+  @include laptop {
+    animation-name: circle;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+  }
 }
 
 @keyframes dash {

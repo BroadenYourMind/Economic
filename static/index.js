@@ -2,24 +2,24 @@
 
 window.addEventListener('load', function() {
   setTimeout(function() {
-    const firsAnim = document.querySelectorAll('.animation-first');
-    const secondAnim = document.querySelectorAll('.animation-second');
-    const thirdAnim = document.querySelectorAll('.animation-third');
+    const firsAnim = document.querySelectorAll('.animation-first-down');
+    const secondAnim = document.querySelectorAll('.animation-second-down');
+    const thirdAnim = document.querySelectorAll('.animation-third-down');
     const fourthAnim = document.querySelectorAll('.animation-fourth');
     const fifthAnim = document.querySelectorAll('.animation-fifth');
     const sixthAnim = document.querySelectorAll('.animation-sixth');
     const seventhAnim = document.querySelectorAll('.animation-seventh');
 
     firsAnim.forEach(function(element) {
-      element.classList.add('animation-first-active');
+      element.classList.add('animation-first-down-active');
     });
 
     secondAnim.forEach(function(element) {
-      element.classList.add('animation-second-active');
+      element.classList.add('animation-second-down-active');
     });
 
     thirdAnim.forEach(function(element) {
-      element.classList.add('animation-third-active');
+      element.classList.add('animation-third-down-active');
     });
 
     fourthAnim.forEach(function(element) {
