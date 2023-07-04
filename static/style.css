@@ -286,7 +286,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  z-index: -1;
+  z-index: 1;
 }
 @media (max-width: 767px) {
   .hero__bottom-image {
@@ -368,7 +368,7 @@
 }
 @media (max-width: 1023px) {
   .about-us__graf-description {
-    right: 5%;
+    right: 1%;
     top: 65%;
   }
 }
@@ -461,22 +461,66 @@ td {
   position: relative;
   top: 500px;
 }
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  gap: 130px;
+}
+@media (max-width: 767px) {
+  .footer__container {
+    gap: 40px;
+  }
+}
 .footer__main {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 767px) {
+  .footer__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+  }
+}
+.footer__main-flex {
+  display: flex;
+  gap: 130px;
+}
+@media (max-width: 1023px) {
+  .footer__main-flex {
+    gap: 80px;
+  }
+}
+@media (max-width: 767px) {
+  .footer__main-flex {
+    justify-content: center;
+  }
+}
 .footer__main-logo {
   max-width: 116px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+.footer__main-link-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+@media (max-width: 767px) {
+  .footer__main-link-nav-list {
+    text-align: center;
+  }
 }
 .footer__main-logo-text {
   color: var(--color-black);
-  padding: 28px 0;
   line-height: 28.2px;
   font-size: 25.45px;
 }
 .footer__main-link-nav-item {
-  padding-bottom: 28px;
   font-size: 18px;
   font-weight: 700;
 }
@@ -486,9 +530,21 @@ td {
 .footer__main-link-nav-link:hover {
   color: var(--footer-link);
 }
-.footer__main-info-item {
-  padding-bottom: 30px;
+@media (max-width: 767px) {
+  .footer__main-info {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+.footer__main-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   color: var(--footer-link-info);
+}
+.footer__main-info-list:hover {
+  color: var(--bg-btn);
 }
 .footer__main-info-link {
   color: var(--footer-link-info);
@@ -502,6 +558,12 @@ td {
   font-size: 14px;
   font-weight: 700;
 }
+@media (max-width: 767px) {
+  .footer__main-social {
+    display: flex;
+    justify-content: center;
+  }
+}
 .footer__main-social-list {
   display: flex;
   gap: 16px;
@@ -510,7 +572,6 @@ td {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 144px;
   padding-bottom: 48px;
 }
 .footer__bottom-copyright {
@@ -594,7 +655,7 @@ td {
 .animation-seventh {
   transform: translate(0px, 100px);
   opacity: 0;
-  transition: all 0.7s ease 0.3s;
+  transition: 0.7s ease 0.3s;
 }
 
 .animation-seventh-active {

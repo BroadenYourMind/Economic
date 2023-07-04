@@ -64,9 +64,10 @@ window.addEventListener('load', function() {
   
         if (window.pageYOffset > animItemOffset - animItemPoint && window.pageYOffset < animItemOffset + animItemHeight) {
           animItem.classList.add('anim-active');
-        } else {
-          animItem.classList.remove('anim-active');
-        }
+        } 
+        // else {
+        //   animItem.classList.remove('anim-active');
+        // }
       }
     }
   

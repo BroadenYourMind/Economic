@@ -342,7 +342,7 @@ $breakpoint-desktop: 1366px;
     position: absolute;
     bottom: 0;
     right: 0;
-    z-index: -1;
+    z-index: 1;
 
     @include before-tablet {
       display: none;
@@ -430,7 +430,7 @@ $breakpoint-desktop: 1366px;
     top: 68%;
 
     @include before-laptop {
-      right: 5%;
+      right: 1%;
       top: 65%;
     }
   }
@@ -529,28 +529,72 @@ td {
   position: relative;
   top: 500px;
 
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 130px;
+
+    @include before-tablet {
+      gap: 40px;
+    }
+  }
+
   &__main {
     display: flex;
     justify-content: space-between;
+
+    @include before-tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 60px;
+    }
+  }
+
+  &__main-flex {
+    display: flex;
+    gap: 130px;
+
+    @include before-laptop {
+      gap: 80px;
+    }
+
+    @include before-tablet {
+      justify-content: center;
+    }
   }
 
   &__main-logo {
     max-width: 116px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+
+
+  &__main-link-nav-list{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    @include before-tablet {
+      text-align: center;
+    }
   }
 
   &__main-logo-text {
     color: var(--color-black);
-    padding: 28px 0;
     line-height: 28.2px;
     font-size: 25.45px;
   }
 
   &__main-link-nav-item {
-    padding-bottom: 28px;
     font-size: 18px;
     font-weight: 700;
   }
+
 
   &__main-link-nav-link {
     color: var(--color-black);
@@ -559,11 +603,25 @@ td {
     }
   }
 
-  &__main-info-item {
-    padding-bottom: 30px;
-    color: var(--footer-link-info);
+  &__main-info {
+    @include before-tablet {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
   }
 
+  &__main-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: var(--footer-link-info);  
+
+    &:hover {
+      color: var(--bg-btn);
+    }
+  
+  }
   &__main-info-link {
     color: var(--footer-link-info);
 
@@ -579,6 +637,13 @@ td {
     font-weight: 700;
   }
 
+  &__main-social {
+    @include before-tablet {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
   &__main-social-list {
     display: flex;
     gap: 16px;
@@ -588,7 +653,6 @@ td {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 144px;
     padding-bottom: 48px;
   }
   &__bottom-copyright {
@@ -674,7 +738,7 @@ td {
 .animation-seventh {
   transform: translate(0px, 100px);
   opacity: 0;
-  transition: all 0.7s ease 0.3s;
+  transition: 0.7s ease 0.3s;
 }
 
 .animation-seventh-active {
