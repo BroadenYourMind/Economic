@@ -68,6 +68,8 @@ $breakpoint-desktop: 1366px;
   --table-bg: #e9f5ff;
   --table-color-second: #8251c1;
   --table-border: #c2dcf0;
+  --footer-link: #0076a0;
+  --footer-link-info: #606d81;
 }
 
 .container {
@@ -340,7 +342,7 @@ $breakpoint-desktop: 1366px;
     position: absolute;
     bottom: 0;
     right: 0;
-    z-index: -1;
+    z-index: 1;
 
     @include before-tablet {
       display: none;
@@ -401,7 +403,7 @@ $breakpoint-desktop: 1366px;
     height: auto;
     position: absolute;
     left: 13%;
-    top: 65%;
+    top: 68%;
 
     @include before-laptop {
       left: 2.5%;
@@ -413,7 +415,7 @@ $breakpoint-desktop: 1366px;
     max-width: 55%;
     height: auto;
     position: absolute;
-    top: 59%;
+    top: 60%;
     left: 15%;
 
     @include before-laptop {
@@ -428,7 +430,7 @@ $breakpoint-desktop: 1366px;
     top: 68%;
 
     @include before-laptop {
-      right: 5%;
+      right: 1%;
       top: 65%;
     }
   }
@@ -469,6 +471,11 @@ $breakpoint-desktop: 1366px;
     width: 80%;
     position: absolute;
     bottom: -55%;
+
+    @include before-laptop {
+      width: 95%;
+      bottom: -45%;
+    }
   }
 
   &__block-table-thead-block-header {
@@ -516,6 +523,148 @@ td {
 }
 .center-border {
   border-right: 1px solid var(--table-border);
+}
+
+.footer {
+  position: relative;
+  top: 500px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 130px;
+
+    @include before-tablet {
+      gap: 40px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+
+    @include before-tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 60px;
+    }
+  }
+
+  &__main-flex {
+    display: flex;
+    gap: 130px;
+
+    @include before-laptop {
+      gap: 80px;
+    }
+
+    @include before-tablet {
+      justify-content: center;
+    }
+  }
+
+  &__main-logo {
+    max-width: 116px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+
+
+  &__main-link-nav-list{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    @include before-tablet {
+      text-align: center;
+    }
+  }
+
+  &__main-logo-text {
+    color: var(--color-black);
+    line-height: 28.2px;
+    font-size: 25.45px;
+  }
+
+  &__main-link-nav-item {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+
+  &__main-link-nav-link {
+    color: var(--color-black);
+    &:hover {
+      color: var(--footer-link);
+    }
+  }
+
+  &__main-info {
+    @include before-tablet {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  &__main-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: var(--footer-link-info);  
+
+    &:hover {
+      color: var(--bg-btn);
+    }
+  
+  }
+  &__main-info-link {
+    color: var(--footer-link-info);
+
+    &:hover {
+      color: var(--bg-btn);
+    }
+  }
+
+  &__main-info-item-privacy {
+    color: var(--bg-btn);
+    border-bottom: 1px solid var(--bg-btn);
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  &__main-social {
+    @include before-tablet {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__main-social-list {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 48px;
+  }
+  &__bottom-copyright {
+    display: flex;
+    align-items: center;
+  }
+
+  &__bottom-payment {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
 }
 
 /* animation */
@@ -589,7 +738,7 @@ td {
 .animation-seventh {
   transform: translate(0px, 100px);
   opacity: 0;
-  transition: all 0.7s ease 0.3s;
+  transition: 0.7s ease 0.3s;
 }
 
 .animation-seventh-active {
