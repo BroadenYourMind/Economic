@@ -536,7 +536,8 @@ $breakpoint-desktop: 1366px;
 
 
   &__container {
-    padding: 50px 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -548,9 +549,17 @@ $breakpoint-desktop: 1366px;
 
   &__block-info{
     width: 100%;
+
+    @include before-tablet {
+      width: 95%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__header {
+    width: 100%;
     padding: 16px 0;
     display: flex;
     flex-direction: column;
@@ -566,19 +575,32 @@ $breakpoint-desktop: 1366px;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 1;
     opacity: 1;
+    @include before-tablet {
+    height: 100%;
+    }
   }
 
   &__header-main {
     font-size: 2em;
     color: var(--price-header);
     font-weight: 700;
+
+    @include before-tablet {
+      font-size: 1.250em;
+    }
   }
 
   &__header-description {
     font-size: 1.125em;
     color: var(--price-header);
+
+    @include before-tablet {
+      font-size: 0.875em;
+      padding: 0 42px;
+      z-index: 2;
+    }
   }
 
   &__block {
@@ -586,7 +608,20 @@ $breakpoint-desktop: 1366px;
     display: flex;
     background-color: var(--white);
     gap: 16px;
+
+      @include before-tablet {
+        flex-direction: column;
+        padding: 16px;
+        background-color: var(--white);
+      }
   }
+
+  &__block-info-left-image-img {
+    @include before-laptop {
+      width: 100%;  
+    }
+    }
+
 
   &__block-info-left {
     display: flex;
@@ -602,6 +637,12 @@ $breakpoint-desktop: 1366px;
     gap: 12px;
     font-size: 0.875em;
     color: var(--price-text);
+  }
+
+  &__block-info-left-description-text {
+    @include before-tablet {
+      font-weight: 700;
+    }
   }
 
   &__block-info-left-description-link {
@@ -625,6 +666,10 @@ $breakpoint-desktop: 1366px;
     flex-direction: column;
     text-align: center;
     gap: 16px;
+
+      @include before-tablet {
+        box-shadow: none;
+      }
   }
 
   &__block-info-right-main {
@@ -655,6 +700,10 @@ $breakpoint-desktop: 1366px;
     color: var(--price-text);
     font-size: 1.25em;
     font-weight: 700;
+
+    @include before-tablet {
+      font-size: 1.125em;
+    }
   }
 
   &__block-info-right-content {
@@ -663,6 +712,10 @@ $breakpoint-desktop: 1366px;
     gap: 16px;
     padding-bottom: 24px;
     border-bottom: solid 2px var(--price-border);
+  }
+
+  &__block-info-right-content-item {
+    font-size: 0.875em;
   }
 
   &__block-info-right-content-list {
@@ -681,16 +734,32 @@ $breakpoint-desktop: 1366px;
   &__block-info-right-for-header {
     font-size: 1.250em;
     font-weight: 700;
+
+    @include before-tablet {
+      font-size: 1.125em;
+    }
   }
 
   &__block-info-right-for-text {
     font-weight: 1.125em;
+
+    @include before-tablet {
+      font-size: 0.875em;
+    }
+  }
+
+  &__text-strong {
+    font-weight: 600;
   }
 
   &__text {
     font-size: 1em;
     font-weight: 400;
     text-align: left;
+
+    @include before-tablet {
+      font-size: 0.875em;
+    }
   }
 
   &__btn {
@@ -699,18 +768,22 @@ $breakpoint-desktop: 1366px;
     justify-content: center;
   }
 
+  &__info-svg {
+    max-width: 100%;
+    z-index: 1;
+  }
+
   &__svg {
     bottom: 83.3%;
     right: 70%;
     transform: rotate(180deg);
-
   }
 
   &__about-us-block {
     gap: 100px;
   }
-
 }
+
 
 
 
