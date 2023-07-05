@@ -557,10 +557,12 @@
   gap: 12px;
   font-size: 1.125em;
   color: var(--bg-btn);
-  border-bottom: 1px solid var(--bg-btn);
 }
 .price__block-info-left-description-link:hover {
   color: var(--bg-btn-hover);
+}
+.price__block-info-left-description-link-border {
+  border-bottom: 1px solid var(--bg-btn);
 }
 .price__block-info-right {
   box-shadow: 4px 4px 30px 0px rgba(115, 142, 174, 0.2509803922);

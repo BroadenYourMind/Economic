@@ -651,11 +651,15 @@ $breakpoint-desktop: 1366px;
     gap: 12px;
     font-size: 1.125em;
     color: var(--bg-btn);
+    
+    &:hover {
+      color: var(--bg-btn-hover);
+    }
+  }
+  
+  &__block-info-left-description-link-border {
     border-bottom: 1px solid var(--bg-btn);
 
-      &:hover {
-        color: var(--bg-btn-hover);
-      }
   }
 
   &__block-info-right {
